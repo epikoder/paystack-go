@@ -265,6 +265,29 @@ func (c *Client) decodeResponse(httpResp *http.Response, v interface{}) error {
 			return mapstruct(data, v)
 		default:
 			_ = t
+			for key, val := range resp {
+				if key == "data" {
+					data, ok := val.([]interface{})
+					if ok {
+						for i, v := range data {
+							val2, ok := v.(map[string]interface{})
+							if ok {
+								for k, v := range val2 {
+									if k == "metadata" {
+										buf, err := json.Marshal(v)
+										if err != nil {
+											val2[k] = ""
+										} else {
+											val2[k] = string(buf)
+										}
+									}
+								}
+								data[i] = val2
+							}
+						}
+					}
+				}
+			}
 			return mapstruct(resp, v)
 		}
 	}
