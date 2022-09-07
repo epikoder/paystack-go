@@ -1,4 +1,2 @@
-github.com/mitchellh/mapstructure v0.0.0-20170125051937-db1efb556f84 h1:rrg06yhhsqEELubsnYWqadxdi0CYJ97s899oUXDIrkY=
-github.com/mitchellh/mapstructure v0.0.0-20170125051937-db1efb556f84/go.mod h1:FVVH3fgwuzCH5S8UJGiWEs2h04kUh9fWfEaFds41c1Y=
 github.com/mitchellh/mapstructure v1.5.0 h1:jeMsZIYE/09sWLaz43PL7Gy6RuMjD2eJVyuac5Z2hdY=
 github.com/mitchellh/mapstructure v1.5.0/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RRV2QTWOzhPopBRo=
